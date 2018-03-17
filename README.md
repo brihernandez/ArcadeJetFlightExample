@@ -22,7 +22,7 @@ Note that if you import the Asset Package, you will have to set up some addition
 - R Bumper - Speed up
 
 ## The Jet
-![screenshot](./Screenshots/jet.png)
+![screenshot](./Screenshots/banked.png)
 
 The jet consists of two components: **StickInput** and **JetMovement**. Both are very simple and scripts.
 
@@ -31,7 +31,6 @@ The jet consists of two components: **StickInput** and **JetMovement**. Both are
 The first thing you must do is assign an input. Jet movement requires values from a **StickInput** component in order to figure out how to apply the forces it has. Also worth noting is that the default values assume a Rigidbody with a mass of 100 and colliders in a rough airplane shape.
 
 #### Flying smoothly
-![screenshot](./Screenshots/banked.png)
 
 In order to fly correct, the plane requires a high drag: 5 in the example. Without such a high drag, the plane would slip significantly and take time to adjust velocity vector. Planes don't generally slip around like that, and for a fast action oriented flight game you want tight and predictable controls. However, with such a high drag, the forces applied to it must be smoothly ramped up and down. If not, the same forces that allow the plane to change directions so quickly, will also make the plane accelerate and decelerate almost instantly in response to throttle changes.
 

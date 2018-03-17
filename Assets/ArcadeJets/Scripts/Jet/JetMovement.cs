@@ -5,13 +5,18 @@ namespace ArcadeJets
    [RequireComponent(typeof(Rigidbody))]
    public class JetMovement : MonoBehaviour
    {
+      [Tooltip("Controller for the jet.")]
       public StickInput input;
 
       [Tooltip("How powerfully the plane can maneuver in each axis.\n\nX: Pitch\nY: Yaw\nZ: Roll")]
       public Vector3 turnTorques = new Vector3(60.0f, 10.0f, 90.0f);
+      [Tooltip("Torque used by the magic banking force that rotates the plane when the plane is banked.")]
       public float bankTorque = 5.0f;
+      [Tooltip("Power of the engine at max throttle.")]
       public float maxThrust = 3000.0f;
+      [Tooltip("How quickly the jet can accelerate and decelerate.")]
       public float acceleration = 10.0f;
+      [Tooltip("How quickly the jet will brake when the throttle goes below neutral.")]
       public float brakeDrag = 5.0f;
 
       private Rigidbody rigid;

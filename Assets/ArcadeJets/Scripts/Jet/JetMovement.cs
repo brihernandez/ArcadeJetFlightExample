@@ -40,6 +40,15 @@ namespace ArcadeJets
       {
          if (input == null)
             Debug.LogWarning(name + ": JetMovement has no input assigned!");
+
+         // Making the center of mass the object's pivot makes its flight behavior much more
+         // predictable and less reliant on the layout of its colliders.
+         rigid.centerOfMass = Vector3.zero;
+
+         // While I haven't done it here, you can also use Rigidbody.inertiaTensor to do the
+         // same but for rotations. Without it, the forces required to rotate on each axis vary
+         // depending on the shape of the colliders.
+         // rigid.inertiaTensor = Vector3.one * rigid.mass * 5.0f;
       }
 
       private void FixedUpdate()

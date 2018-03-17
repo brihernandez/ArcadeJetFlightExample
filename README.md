@@ -22,13 +22,14 @@ Note that if you import the Asset Package, you will have to set up some addition
 - R Bumper - Speed up
 
 ## The Jet
-![screenshot](./Screenshots/banked.png)
 
 The jet consists of two components: **StickInput** and **JetMovement**. Both are very simple and scripts.
 
 ### Jet Movement
 
 The first thing you must do is assign an input. Jet movement requires values from a **StickInput** component in order to figure out how to apply the forces it has. Also worth noting is that the default values assume a Rigidbody with a mass of 100 and colliders in a rough airplane shape.
+
+![screenshot](./Screenshots/banked.png)
 
 #### Flying smoothly
 
